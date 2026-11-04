@@ -1,0 +1,67 @@
+{
+  "checked_on": "2026-11-04",
+  "audience": "Student notebooks for independent practice",
+  "sessions": [
+    {
+      "session": 1,
+      "notebook": "notebooks/BGS_Session_01_Student.ipynb",
+      "code_cells": 15,
+      "github_sha256": "3a94d6c6e87ae1aa5a96ea9de22edd8877c98d45be6acc9305850c2800e5c3dc",
+      "workshop_drive_url": "https://colab.research.google.com/drive/1r886hRlH6J7TVzDWfmxzbohDI7yfCjFT",
+      "source_code_preserved": true,
+      "saved_outputs_removed": true,
+      "transient_metadata_removed_from_cells": 0
+    },
+    {
+      "session": 2,
+      "notebook": "notebooks/BGS_Session_02_Student.ipynb",
+      "code_cells": 13,
+      "github_sha256": "0312a93511c1a86793bb4cf493e9b0643cba5d6409be349c8ed74abc07e7a000",
+      "workshop_drive_url": "https://colab.research.google.com/drive/1xSsWCmLuoqVxjaDT4VusVOQ--JFKXzUW",
+      "source_code_preserved": true,
+      "saved_outputs_removed": true,
+      "transient_metadata_removed_from_cells": 13
+    },
+    {
+      "session": 3,
+      "notebook": "notebooks/BGS_Session_03_Student.ipynb",
+      "code_cells": 18,
+      "github_sha256": "43537bbf2c924edc851e13440fc2b131473e737ecb97b6002fcdeebc2653505d",
+      "workshop_drive_url": "https://colab.research.google.com/drive/1caHKlFQQIvlsxh5yAS-CSvlkpJTqjxsp",
+      "source_code_preserved": true,
+      "saved_outputs_removed": true,
+      "transient_metadata_removed_from_cells": 18
+    },
+    {
+      "session": 4,
+      "notebook": "notebooks/BGS_Session_04_Student.ipynb",
+      "code_cells": 15,
+      "github_sha256": "d5098dcfae1b3c761d9ba973386fd1cf7608da20e1749b2d22140330293153aa",
+      "workshop_drive_url": "https://colab.research.google.com/drive/1wzUF1pSawWzn0VnwYM1nuUyvcZRqn72b",
+      "source_code_preserved": true,
+      "saved_outputs_removed": true,
+      "transient_metadata_removed_from_cells": 0
+    },
+    {
+      "session": 5,
+      "notebook": "notebooks/BGS_Session_05_Student.ipynb",
+      "code_cells": 11,
+      "github_sha256": "85c051746298609e26b1ef562e44cb10c680a0bd8320862cef9cdf18f7196e0e",
+      "workshop_drive_url": "https://colab.research.google.com/drive/1qiEkw8hqnnWDIY2R-aZ-ZleL5E-xtCK3",
+      "source_code_preserved": true,
+      "saved_outputs_removed": true,
+      "transient_metadata_removed_from_cells": 0
+    },
+    {
+      "session": 6,
+      "notebook": "notebooks/BGS_Session_06_Student.ipynb",
+      "code_cells": 19,
+      "github_sha256": "97aea2e4bcf1a3781f0cbc11e5855acd90c5d6a4ada82d8bb73739fa8f69c54f",
+      "workshop_drive_url": "https://colab.research.google.com/drive/1-suAdNQENTSZdrY8w-UMOSsL2hi-_FSf",
+      "source_code_preserved": true,
+      "saved_outputs_removed": true,
+      "transient_metadata_removed_from_cells": 0
+    }
+  ],
+  "verification": "Notebook source, format and repository assets are checked without requesting model replies. Live access depends on your provider account and current model availability."
+}
