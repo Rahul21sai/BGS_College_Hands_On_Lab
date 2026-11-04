@@ -4,7 +4,19 @@ Six guided Google Colab labs for fifth-semester computer science students. Start
 
 Prepared by **Naga Sai Rahul Vudumula** for the BGS College workshop. Fork this repository, save your own notebooks and keep improving the projects after the workshop.
 
-**Start here:** [Run a notebook](#open-the-labs) · [Fork and save your work](#fork-and-save-your-work) · [AI engineer roadmap](docs/AI_ENGINEER_ROADMAP.md) · [Assignment](assignments/README.md)
+**Start here:** [Day 2 hands-on projects](day2-projects/README.md) · [Original six labs](#open-the-labs) · [Fork and save your work](#fork-and-save-your-work) · [AI engineer roadmap](docs/AI_ENGINEER_ROADMAP.md) · [Assignment](assignments/README.md)
+
+## Day 2 hands-on projects
+
+For Sessions 4–6, use the [new six-project pack](day2-projects/README.md): **two guided builds per two-hour session**, with working starters, student modifications and observable checks.
+
+| Session | First build | Second build |
+| --- | --- | --- |
+| 4 · MCP | Campus data tools backed by SQLite | Persistent study memory through MCP |
+| 5 · AI coding | Retrieve project code, review a change and test it | Compare code candidates with the same test contract |
+| 6 · Research workflows | A source-backed preparation brief | A README writer grounded in code and observed tests |
+
+The [project index](day2-projects/README.md) has Colab links, problem statements and session QR codes. The [teaching plan](docs/DAY_2_TEACHING_PLAN.md) allocates most of each session to building and checking work at students' desks. These smaller classroom adaptations take inspiration from selected [AI Engineering Hub](https://github.com/patchy631/ai-engineering-hub) projects; [source notes](docs/DAY_2_SOURCE_SELECTION.md) explain the scope and retained licence notice.
 
 ## Open the labs
 
@@ -88,7 +100,7 @@ python -m pip install "nbformat>=5.10,<6"
 python tools/validate_notebooks.py
 ```
 
-These checks validate notebook structure, Python syntax, clean saved outputs, publication metadata and required assets. They do not execute notebook model calls or establish current provider availability. The GitHub workflow runs the same checks without an API key.
+These checks validate the original labs and the Day 2 starters: notebook structure, Python syntax, clean saved outputs, publication metadata and required assets. They do not execute notebook model calls or establish current provider availability. The GitHub workflow runs the same checks without an API key.
 
 ## Contributing and reuse
 

@@ -16,7 +16,7 @@ Keep the original teaching exercises and their baseline checks intact unless you
 1. Clear notebook outputs and execution counts. Remove transient Colab execution and widget metadata; retain the lesson source and stable cell IDs.
 2. Keep credentials in Colab Secrets or private environment configuration. Include only synthetic or appropriately licensed data.
 3. Run `python tools/validate_notebooks.py` after installing `nbformat`.
-4. If you changed a notebook, update its SHA-256 in `LAB_INDEX.json` after clearing outputs, and describe why the source changed.
+4. If you changed an original lab, update its SHA-256 in `LAB_INDEX.json` after clearing outputs. For a Day 2 starter, update its record in `day2-projects/PROJECT_INDEX.json`. Describe why the source changed.
 5. State whether checks used a real provider or an explicitly labelled local test response. Do not claim an unexecuted API call or browser interaction passed.
 
 For a bug report, include the session, relevant cell heading, runtime/package versions and a short error message. Remove tokens, account information and private content before sharing.

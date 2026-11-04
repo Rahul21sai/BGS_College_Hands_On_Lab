@@ -14,6 +14,8 @@ The workshop notebooks, synthetic practice documents, student assignment and roa
 
 Individual notebooks retain their lesson-specific source links. The [career roadmap](AI_ENGINEER_ROADMAP.md) links to the original course providers and explains which resources are optional.
 
+The [Day 2 guided projects](../day2-projects/README.md) are smaller classroom implementations inspired by selected projects from [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub). See the [selection notes](DAY_2_SOURCE_SELECTION.md) for pinned links, scope changes and the retained upstream MIT notice.
+
 The Session 5 setup handout identifies the reviewed community router sources separately from official client documentation. Router compatibility and model access can change. Refer to those projects' own licences and current documentation before installing them.
 
 The food menu, orders, practice policies and synthetic research examples are classroom simulations. Names of colleges, tool providers and services identify their context; they do not imply endorsement of third-party integrations.

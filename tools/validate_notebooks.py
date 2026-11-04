@@ -58,6 +58,23 @@ REQUIRED_STARTER_FILES = {
 }
 
 
+def guided_project_records() -> list[dict]:
+    """Load the additional Day 2 starters without changing the original lab contract."""
+    index_path = ROOT / "day2-projects/PROJECT_INDEX.json"
+    if not index_path.exists():
+        return []
+    data = json.loads(index_path.read_text(encoding="utf-8"))
+    records = data["projects"]
+    if not isinstance(records, list) or len(records) != 6:
+        raise ValueError("Expected six guided Day 2 projects")
+    if {record["id"] for record in records} != {"04A", "04B", "05A", "05B", "06A", "06B"}:
+        raise ValueError("Unexpected guided project IDs")
+    paths = [record["notebook"] for record in records]
+    if len(set(paths)) != 6 or any(not path.startswith("day2-projects/session-") or not path.endswith(".ipynb") for path in paths):
+        raise ValueError("Unexpected guided notebook paths")
+    return records
+
+
 def metadata_has_private_state(value: object) -> bool:
     if isinstance(value, dict):
         return any(
@@ -86,9 +103,15 @@ def main() -> int:
         print("Run this check from a Git checkout with Git installed.")
         return 1
 
+    try:
+        guided_records = guided_project_records()
+    except (OSError, ValueError, KeyError, TypeError):
+        errors.append("Day 2 PROJECT_INDEX.json must describe the six guided student projects.")
+        guided_records = []
     actual_notebooks = {name for name in paths if name.endswith(".ipynb")}
-    if actual_notebooks != set(EXPECTED_NOTEBOOKS):
-        errors.append("The release must contain exactly the six expected student notebooks.")
+    expected_notebooks = set(EXPECTED_NOTEBOOKS) | {record["notebook"] for record in guided_records}
+    if actual_notebooks != expected_notebooks:
+        errors.append("The release notebook paths must match the original labs and the Day 2 project index.")
 
     for relative in sorted(paths):
         path = ROOT / relative
@@ -182,6 +205,37 @@ def main() -> int:
     if total_code_cells != 91:
         errors.append("The six release notebooks must contain 91 code cells in total.")
 
+    guided_code_cells = 0
+    for record in guided_records:
+        relative = record["notebook"]
+        path = ROOT / relative
+        try:
+            raw = path.read_bytes()
+            book = json.loads(raw)
+            nbformat.validate(nbformat.from_dict(book))
+            cells = book["cells"]
+            identities = [cell.get("id") for cell in cells]
+            if any(not identity for identity in identities) or len(set(identities)) != len(identities):
+                raise ValueError("Missing or duplicate cell IDs")
+            if metadata_has_private_state(book.get("metadata", {})):
+                raise ValueError("Private notebook metadata")
+            code_cells = [cell for cell in cells if cell["cell_type"] == "code"]
+            guided_code_cells += len(code_cells)
+            if len(code_cells) != record["code_cells"] or hashlib.sha256(raw).hexdigest() != record["sha256"]:
+                raise ValueError("Project count or hash differs")
+            for cell in cells:
+                if metadata_has_private_state(cell.get("metadata", {})):
+                    raise ValueError("Private cell metadata")
+                if cell["cell_type"] != "code":
+                    continue
+                if cell.get("outputs") != [] or cell.get("execution_count") is not None:
+                    raise ValueError("Saved outputs")
+                code = cell["source"] if isinstance(cell["source"], str) else "".join(cell["source"])
+                compile(code, f"{relative}:{cell['id']}", "exec", flags=ast.PyCF_ALLOW_TOP_LEVEL_AWAIT)
+        except Exception:
+            # Keep source, account details and provider responses out of validation logs.
+            errors.append(f"Guided project validation failed: {relative}.")
+
     for filename in sorted(REQUIRED_STARTER_FILES):
         relative = f"{STARTER}/{filename}"
         if relative not in paths or not (ROOT / relative).is_file():
@@ -192,7 +246,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}")
         return 1
-    print("Validated 6 student notebooks, 91 Python code cells, release hashes and 14 Session 5 starter assets.")
+    print(f"Validated 6 original labs (91 code cells) and {len(guided_records)} Day 2 starters ({guided_code_cells} code cells), release hashes and 14 Session 5 assets.")
     print("Outputs and private execution metadata are clear; no credential patterns or teacher-only files were found.")
     print("Static checks only: no notebook cells, installations or model requests were executed.")
     return 0

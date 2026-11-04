@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-11-04",
+  "upstream_revision": "042aeb5067384981eeba6a07fa882f436bb1660d",
+  "purpose": "Two guided hands-on cores per Session 4, 5 and 6; original six labs remain available.",
+  "projects": [
+    {
+      "id": "04A",
+      "session": 4,
+      "title": "Campus data through MCP",
+      "notebook": "day2-projects/session-04/04A_Campus_Data_MCP.ipynb",
+      "code_cells": 9,
+      "sha256": "082f43846a75f5bf86c913ab01b009fb8c475857ccba8360276715961ca58813",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day2-projects/session-04/04A_Campus_Data_MCP.ipynb",
+      "source_inspiration": "https://github.com/patchy631/ai-engineering-hub/tree/042aeb5067384981eeba6a07fa882f436bb1660d/llamaindex-mcp",
+      "outcome": "Real MCP tools query a small SQLite event catalogue.",
+      "engine": "No model key; actual MCP connection.",
+      "core_hands_on_minutes": 40
+    },
+    {
+      "id": "04B",
+      "session": 4,
+      "title": "Study memory through MCP",
+      "notebook": "day2-projects/session-04/04B_Study_Memory_MCP.ipynb",
+      "code_cells": 10,
+      "sha256": "d944328a7c04ccbe83e58f99da452a447ff991073493aec3a536a00bfc20cc0d",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day2-projects/session-04/04B_Study_Memory_MCP.ipynb",
+      "source_inspiration": "https://github.com/patchy631/ai-engineering-hub/tree/042aeb5067384981eeba6a07fa882f436bb1660d/agent-with-mcp-memory",
+      "outcome": "Save and retrieve project goals and notes across MCP connections.",
+      "engine": "No model key; actual MCP connection.",
+      "core_hands_on_minutes": 40
+    },
+    {
+      "id": "05A",
+      "session": 5,
+      "title": "Chat with your project code",
+      "notebook": "day2-projects/session-05/05A_Chat_With_Project_Code.ipynb",
+      "code_cells": 9,
+      "sha256": "3763b7643b09e12d98cd1546096455fd6e0b80cfb07324c1eeb42e1fa3bb3977",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day2-projects/session-05/05A_Chat_With_Project_Code.ipynb",
+      "source_inspiration": "https://github.com/patchy631/ai-engineering-hub/tree/042aeb5067384981eeba6a07fa882f436bb1660d/chat-with-code",
+      "outcome": "Retrieve code with file and line references, request a small change and run tests.",
+      "engine": "Retrieval-only core; use your available assistant or manual route for changes.",
+      "core_hands_on_minutes": 40
+    },
+    {
+      "id": "05B",
+      "session": 5,
+      "title": "AI code test bench",
+      "notebook": "day2-projects/session-05/05B_AI_Code_Test_Bench.ipynb",
+      "code_cells": 8,
+      "sha256": "332076b210566143f3926dbcee0a93746efc8e351bff2b9fb45d0f8a58534d32",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day2-projects/session-05/05B_AI_Code_Test_Bench.ipynb",
+      "source_inspiration": "https://github.com/patchy631/ai-engineering-hub/tree/042aeb5067384981eeba6a07fa882f436bb1660d/code-model-comparison",
+      "outcome": "Compare reviewed implementations using the same fixed checks.",
+      "engine": "Provided candidates are labelled samples, not claimed model outputs.",
+      "core_hands_on_minutes": 40
+    },
+    {
+      "id": "06A",
+      "session": 6,
+      "title": "Evidence-based research crew",
+      "notebook": "day2-projects/session-06/06A_Evidence_Based_Research_Crew.ipynb",
+      "code_cells": 10,
+      "sha256": "39232a3fa3c6e1d2af31dcb247aa3ad2ebffc83a7cacb21981414265c8909abc",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day2-projects/session-06/06A_Evidence_Based_Research_Crew.ipynb",
+      "source_inspiration": "https://github.com/patchy631/ai-engineering-hub/tree/042aeb5067384981eeba6a07fa882f436bb1660d/Multi-Agent-deep-researcher-mcp-windows-linux",
+      "outcome": "Approve a plan, inspect independent analyses and produce a source-backed brief.",
+      "engine": "Deterministic baseline; optional explicit Gemini role calls.",
+      "core_hands_on_minutes": 40
+    },
+    {
+      "id": "06B",
+      "session": 6,
+      "title": "Project README writer",
+      "notebook": "day2-projects/session-06/06B_Project_README_Writer.ipynb",
+      "code_cells": 11,
+      "sha256": "cdad18da705ca6f12b60222983ddf4005540c64e08dc5abc652efd74c60c213d",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day2-projects/session-06/06B_Project_README_Writer.ipynb",
+      "source_inspiration": "https://github.com/patchy631/ai-engineering-hub/tree/042aeb5067384981eeba6a07fa882f436bb1660d/documentation-writer-flow",
+      "outcome": "Write and review documentation from project files and actual test evidence.",
+      "engine": "Deterministic baseline; optional explicit Gemini role calls.",
+      "core_hands_on_minutes": 40
+    }
+  ]
+}
