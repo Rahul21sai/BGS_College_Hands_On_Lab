@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Internship Tracker / BGS Lab</title><link rel="icon" href="data:,"><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header><a class="brand" href="#">Internship Tracker</a><span>BGS College workshop / Session 5</span></header>
+  <main>
+    <section class="intro"><div><p class="context">Your next chapter, in view.</p><h1>One place for<br>your next move.</h1></div><p>Keep a simple record of opportunities, deadlines and progress. Practice with fictional applications in this workshop.</p></section>
+    <section aria-label="Application summary" id="summary-counts" class="summary"></section>
+    <div class="workspace">
+      <section aria-labelledby="applications-title"><div class="list-heading"><div><h2 id="applications-title">Applications</h2><p id="result-count" aria-live="polite"></p></div><label class="filter-label">Show status<select id="status-filter"></select></label></div><div id="application-list"></div></section>
+      <aside aria-labelledby="add-title"><h2 id="add-title">Add an application</h2><p class="hint">Use invented details. Each ID must be unique.</p>
+        <form id="application-form" novalidate>
+          <label>Application ID<input name="id" placeholder="APP-004" maxlength="24" required autocomplete="off"></label>
+          <label>Company<input name="company" placeholder="Example Studio" maxlength="80" required autocomplete="off"></label>
+          <label>Role<input name="role" placeholder="Engineering Intern" maxlength="80" required autocomplete="off"></label>
+          <label>Deadline<input name="deadline" type="date" required></label>
+          <label>Initial status<select name="status"></select></label>
+          <button type="submit">Add application</button>
+        </form>
+        <p id="message" role="status" aria-live="polite"></p><p class="hint">Practice only. This page sends nothing. Reloading restores the three examples.</p>
+      </aside>
+    </div>
+  </main>
+  <footer>V Naga Sai Rahul / BGS College workshop / Fictional companies and applications</footer>
+  <script type="module" src="app.js"></script>
+</body></html>

@@ -46,11 +46,14 @@
       "session": 5,
       "notebook": "notebooks/BGS_Session_05_Student.ipynb",
       "code_cells": 11,
-      "github_sha256": "85c051746298609e26b1ef562e44cb10c680a0bd8320862cef9cdf18f7196e0e",
+      "github_sha256": "4894500aab5b847d3d3a31a5ae3b66547c521a9bf2c430ce7e70440e07ded682",
       "workshop_drive_url": "https://colab.research.google.com/drive/1qiEkw8hqnnWDIY2R-aZ-ZleL5E-xtCK3",
-      "source_code_preserved": true,
+      "source_code_preserved": false,
       "saved_outputs_removed": true,
-      "transient_metadata_removed_from_cells": 0
+      "transient_metadata_removed_from_cells": 0,
+      "lesson": "Internship Application Tracker",
+      "baseline_checks_pass": 16,
+      "announced_defects": false
     },
     {
       "session": 6,

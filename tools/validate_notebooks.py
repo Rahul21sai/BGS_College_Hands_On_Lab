@@ -28,8 +28,8 @@ EXPECTED_CODE_IDS = {
         "s3-028", "s3-030", "s3-032", "s3-034"],
     4: ["install", "server-source", "connect", "discover", "schema", "bill", "invalid",
         "resource", "prompt", "new-tool", "challenge", "bridge-source", "key", "agent", "evidence"],
-    5: ["setup", "baseline-tests", "preview-before", "inspect-context", "edit-cart",
-        "verify-repair", "preview-after-repair", "edit-feature", "verify-feature",
+    5: ["setup", "baseline-tests", "preview-before", "inspect-context", "feature-plan",
+        "edit-feature", "verify-feature", "preview-after", "evidence-checklist",
         "save-evidence", "download-project"],
     6: ["setup", "imports", "key", "model", "schemas", "http", "tools", "discover",
         "state", "plan", "papers", "web", "reflection", "write_judge", "graph",
@@ -50,10 +50,10 @@ CREDENTIAL_PATTERNS = {
     "Private key": re.compile(rb"-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----"),
 }
 FORBIDDEN_RELEASE_NAME = re.compile(r"instructor|solution|private|rehearsal", re.IGNORECASE)
-STARTER = "projects/session-05/food-ordering-starter"
+STARTER = "projects/session-05/internship-tracker-starter"
 REQUIRED_STARTER_FILES = {
     ".gitignore", "AGENTS.md", "CLAUDE.md", "GEMINI.md", "README.md",
-    "SETUP_HANDOUT.md", "TASK_PROMPTS.md", "app.js", "cart.js", "cart.test.js",
+    "TASK_PROMPTS.md", "app.js", "tracker.js", "tracker.test.js", "search.feature-check.mjs",
     "index.html", "package.json", "server.mjs", "styles.css",
 }
 

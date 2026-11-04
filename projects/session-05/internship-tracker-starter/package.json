@@ -1,0 +1,13 @@
+{
+  "name": "bgs-internship-tracker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tracker.test.js",
+    "test:feature": "node --test tracker.test.js search.feature-check.mjs"
+  },
+  "engines": {
+    "node": ">=18.20"
+  }
+}
