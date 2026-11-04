@@ -1,5 +1,7 @@
 # Lab links
 
+[Original six-session notes and materials in Google Drive](https://drive.google.com/drive/folders/1BUgG6tOR2yiJOENsBVOIAsnJTuqG26ij) · [All-session practice project guide](ALL_SESSION_PROJECTS.md)
+
 The repository notebooks are the versioned student copies. Use the root README's Colab buttons to open them from GitHub, or select your own fork in Colab's GitHub notebook picker.
 
 The original classroom Drive copies remain at these addresses:

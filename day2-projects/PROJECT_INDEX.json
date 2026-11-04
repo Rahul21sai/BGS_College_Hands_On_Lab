@@ -20,14 +20,14 @@
     {
       "id": "04B",
       "session": 4,
-      "title": "Study memory through MCP",
-      "notebook": "day2-projects/session-04/04B_Study_Memory_MCP.ipynb",
-      "code_cells": 10,
-      "sha256": "d944328a7c04ccbe83e58f99da452a447ff991073493aec3a536a00bfc20cc0d",
-      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day2-projects/session-04/04B_Study_Memory_MCP.ipynb",
-      "source_inspiration": "https://github.com/patchy631/ai-engineering-hub/tree/042aeb5067384981eeba6a07fa882f436bb1660d/agent-with-mcp-memory",
-      "outcome": "Save and retrieve project goals and notes across MCP connections.",
-      "engine": "No model key; actual MCP connection.",
+      "title": "GitHub project explorer through MCP",
+      "notebook": "day2-projects/session-04/04B_GitHub_Project_Explorer_MCP.ipynb",
+      "code_cells": 11,
+      "sha256": "4e18129280dc363c823045532f2ce2320ad12a6fee4c6752e5084a9daf3d2708",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day2-projects/session-04/04B_GitHub_Project_Explorer_MCP.ipynb",
+      "source_inspiration": "https://github.com/modelcontextprotocol/python-sdk",
+      "outcome": "Inspect and compare allowlisted public AI project repositories through real MCP tools.",
+      "engine": "Real MCP with timestamped snapshot cache; optional public GitHub reads.",
       "core_hands_on_minutes": 40
     },
     {

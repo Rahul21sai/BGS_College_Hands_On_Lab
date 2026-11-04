@@ -1,10 +1,25 @@
 # BGS College Hands-On AI Labs
 
-Six guided Google Colab labs for fifth-semester computer science students. Start with a chatbot, then build agents, document retrieval, MCP tools, a coding workflow and an inspectable research agent.
+Six original Google Colab labs plus two follow-up practice projects for every session, prepared for fifth-semester computer science students. Start with a chatbot, then build agents, document retrieval, MCP tools, a coding workflow and an inspectable research agent.
 
 Prepared by **Naga Sai Rahul Vudumula** for the BGS College workshop. Fork this repository, save your own notebooks and keep improving the projects after the workshop.
 
-**Start here:** [Day 2 hands-on projects](day2-projects/README.md) · [Original six labs](#open-the-labs) · [Fork and save your work](#fork-and-save-your-work) · [AI engineer roadmap](docs/AI_ENGINEER_ROADMAP.md) · [Assignment](assignments/README.md)
+**Start here:** [All-session project guide](docs/ALL_SESSION_PROJECTS.md) · [Original notes and materials in Drive](https://drive.google.com/drive/folders/1BUgG6tOR2yiJOENsBVOIAsnJTuqG26ij) · [Day 1 practice](day1-practice/README.md) · [Day 2 projects](day2-projects/README.md) · [AI engineer roadmap](docs/AI_ENGINEER_ROADMAP.md)
+
+## Practice projects for all six sessions
+
+The [complete project guide](docs/ALL_SESSION_PROJECTS.md) contains two follow-up choices per session, Colab links, problem statements and expected evidence. A [Word copy](resources/BGS_All_6_Sessions_Project_Practice_Guide.docx) is included for sharing with students.
+
+| Session | Practice A | Practice B |
+| --- | --- | --- |
+| 1 · LLM applications | Mock interview coach | Support ticket to validated JSON |
+| 2 · Agents and tools | Campus expense agent | Event registration agent |
+| 3 · RAG and evaluation | Cited campus FAQ | RAG evaluation and local guard exercises |
+| 4 · MCP | Campus data tools | GitHub project explorer |
+| 5 · AI coding | Chat with project code | AI code test bench |
+| 6 · Research workflows | Evidence-based preparation brief | Project README writer |
+
+The [shared Google Drive folder](https://drive.google.com/drive/folders/1BUgG6tOR2yiJOENsBVOIAsnJTuqG26ij) contains the original workshop notes and materials supplied for the six sessions. The original notebook links remain below. [Further project repositories](docs/AI_PROJECT_SOURCE_DIRECTORY.md) provide official examples and community collections for later study.
 
 ## Day 2 hands-on projects
 
@@ -12,7 +27,7 @@ For Sessions 4–6, use the [new six-project pack](day2-projects/README.md): **t
 
 | Session | First build | Second build |
 | --- | --- | --- |
-| 4 · MCP | Campus data tools backed by SQLite | Persistent study memory through MCP |
+| 4 · MCP | Campus data tools backed by SQLite | Explore and compare public GitHub projects through MCP |
 | 5 · AI coding | Retrieve project code, review a change and test it | Compare code candidates with the same test contract |
 | 6 · Research workflows | A source-backed preparation brief | A README writer grounded in code and observed tests |
 
@@ -100,7 +115,7 @@ python -m pip install "nbformat>=5.10,<6"
 python tools/validate_notebooks.py
 ```
 
-These checks validate the original labs and the Day 2 starters: notebook structure, Python syntax, clean saved outputs, publication metadata and required assets. They do not execute notebook model calls or establish current provider availability. The GitHub workflow runs the same checks without an API key.
+These checks validate the original labs and both practice packs: notebook structure, Python syntax, clean saved outputs, publication metadata and required assets. They do not execute notebook model calls or establish current provider availability. The GitHub workflow runs the same checks without an API key.
 
 ## Contributing and reuse
 

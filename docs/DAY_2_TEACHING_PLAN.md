@@ -27,7 +27,7 @@ This allocates 80 minutes to building and 13 minutes to checkpoints and demonstr
 
 ## Check learning through the work
 
-**Session 4:** ask students to show tool discovery, a real MCP call, a resource or prompt response, and a changed database record. A direct Python function call alone does not demonstrate the protocol.
+**Session 4:** ask students to show tool discovery, a real MCP call, a resource or prompt response, and the data behind the result. For 4A, inspect the SQLite rows. For 4B, inspect the repository source, timestamp and snapshot/live label. A direct Python function call alone does not demonstrate the protocol.
 
 **Session 5:** ask for a code location, the prompt/context supplied to an assistant, a reviewed edit and the same tests before and after the change. Provided sample candidates must remain labelled as samples.
 

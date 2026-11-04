@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-11-04",
+  "purpose": "Two additional follow-up practice projects per Day 1 session.",
+  "projects": [
+    {
+      "id": "01A",
+      "session": 1,
+      "title": "Mock interview coach",
+      "notebook": "day1-practice/session-01/01A_Mock_Interview_Coach.ipynb",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day1-practice/session-01/01A_Mock_Interview_Coach.ipynb",
+      "code_cells": 7,
+      "sha256": "dcb04702d5a325f7c9e66c6f3ac9a150b990cc20e6b7f3ac9bca04da8e7b34c7",
+      "outcome": "Remember conversation context, give practice feedback and clear a chat.",
+      "engine": "TEST_FIXTURE baseline; optional real Gemini chat.",
+      "practice_minutes": "25–40"
+    },
+    {
+      "id": "01B",
+      "session": 1,
+      "title": "Support ticket to validated JSON",
+      "notebook": "day1-practice/session-01/01B_Support_Ticket_JSON.ipynb",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day1-practice/session-01/01B_Support_Ticket_JSON.ipynb",
+      "code_cells": 8,
+      "sha256": "36e2c81c6f37dbfe953d6580fb33ff429e617ba7e71d76819ae7b6c3aa45818d",
+      "outcome": "Turn fictional requests into locally validated structured proposals.",
+      "engine": "TEST_FIXTURE baseline; optional real Gemini structured output.",
+      "practice_minutes": "25–40"
+    },
+    {
+      "id": "02A",
+      "session": 2,
+      "title": "Campus expense agent",
+      "notebook": "day1-practice/session-02/02A_Campus_Expense_Agent.ipynb",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day1-practice/session-02/02A_Campus_Expense_Agent.ipynb",
+      "code_cells": 9,
+      "sha256": "3774b3399121689526d93e5e9df4e53282f2b3e08f451b4ddd97b1771dc068b8",
+      "outcome": "Track simulated expenses with validated tools and a visible state trace.",
+      "engine": "Scripted tool decisions baseline; optional real Gemini decisions.",
+      "practice_minutes": "25–40"
+    },
+    {
+      "id": "02B",
+      "session": 2,
+      "title": "Event registration agent",
+      "notebook": "day1-practice/session-02/02B_Event_Registration_Agent.ipynb",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day1-practice/session-02/02B_Event_Registration_Agent.ipynb",
+      "code_cells": 9,
+      "sha256": "3835364753c1fe352c2726386e1327c76f34e1346eec27440253717597893fa4",
+      "outcome": "Check seats, register and cancel using approved simulated tool operations.",
+      "engine": "Scripted tool decisions baseline; optional real Gemini decisions.",
+      "practice_minutes": "25–40"
+    },
+    {
+      "id": "03A",
+      "session": 3,
+      "title": "Cited campus FAQ",
+      "notebook": "day1-practice/session-03/03A_Cited_Campus_FAQ.ipynb",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day1-practice/session-03/03A_Cited_Campus_FAQ.ipynb",
+      "code_cells": 13,
+      "sha256": "9535861e9524b4af7193b94c2b672084338173194a53a9856f00853840c18189",
+      "outcome": "Retrieve relevant campus FAQ passages and show source references.",
+      "engine": "Real lexical retrieval baseline; optional model answer.",
+      "practice_minutes": "25–40"
+    },
+    {
+      "id": "03B",
+      "session": 3,
+      "title": "RAG evaluation and guards",
+      "notebook": "day1-practice/session-03/03B_RAG_Evaluation_And_Guards.ipynb",
+      "colab_url": "https://colab.research.google.com/github/Rahul21sai/BGS_College_Hands_On_Lab/blob/main/day1-practice/session-03/03B_RAG_Evaluation_And_Guards.ipynb",
+      "code_cells": 12,
+      "sha256": "87c029a7457775b8555202fa079abb9b9295a48282a2bea622056f84bb79f8b7",
+      "outcome": "Measure evidence, citations and abstention with controlled test cases.",
+      "engine": "Labelled evaluation fixtures; local illustrative guard checks.",
+      "practice_minutes": "25–40"
+    }
+  ]
+}

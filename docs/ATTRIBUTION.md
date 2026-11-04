@@ -16,6 +16,8 @@ Individual notebooks retain their lesson-specific source links. The [career road
 
 The [Day 2 guided projects](../day2-projects/README.md) are smaller classroom implementations inspired by selected projects from [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub). See the [selection notes](DAY_2_SOURCE_SELECTION.md) for pinned links, scope changes and the retained upstream MIT notice.
 
+The [Day 1 practice projects](../day1-practice/README.md) independently adapt prompting/chat ideas from Microsoft's beginner course, structured tool-use patterns from official OpenAI examples, and local evaluation concepts informed by promptfoo. Exact reviewed references and implementation limits are documented in each session README. The replacement Session 4B uses official MCP SDK patterns and attributed public GitHub data. See the [public source directory](AI_PROJECT_SOURCE_DIRECTORY.md) for further study; linked repositories retain their own licences.
+
 The Session 5 setup handout identifies the reviewed community router sources separately from official client documentation. Router compatibility and model access can change. Refer to those projects' own licences and current documentation before installing them.
 
 The food menu, orders, practice policies and synthetic research examples are classroom simulations. Names of colleges, tool providers and services identify their context; they do not imply endorsement of third-party integrations.

@@ -59,20 +59,23 @@ REQUIRED_STARTER_FILES = {
 
 
 def guided_project_records() -> list[dict]:
-    """Load the additional Day 2 starters without changing the original lab contract."""
-    index_path = ROOT / "day2-projects/PROJECT_INDEX.json"
-    if not index_path.exists():
-        return []
-    data = json.loads(index_path.read_text(encoding="utf-8"))
-    records = data["projects"]
-    if not isinstance(records, list) or len(records) != 6:
-        raise ValueError("Expected six guided Day 2 projects")
-    if {record["id"] for record in records} != {"04A", "04B", "05A", "05B", "06A", "06B"}:
-        raise ValueError("Unexpected guided project IDs")
-    paths = [record["notebook"] for record in records]
-    if len(set(paths)) != 6 or any(not path.startswith("day2-projects/session-") or not path.endswith(".ipynb") for path in paths):
-        raise ValueError("Unexpected guided notebook paths")
-    return records
+    """Load both follow-up packs while preserving the original six-lab contract."""
+    combined = []
+    for folder, sessions in [("day1-practice", (1, 2, 3)), ("day2-projects", (4, 5, 6))]:
+        index_path = ROOT / folder / "PROJECT_INDEX.json"
+        if not index_path.exists():
+            continue
+        records = json.loads(index_path.read_text(encoding="utf-8"))["projects"]
+        if not isinstance(records, list) or len(records) != 6:
+            raise ValueError("Expected six projects in each practice pack")
+        expected_ids = {f"{session:02}{part}" for session in sessions for part in ("A", "B")}
+        if {record["id"] for record in records} != expected_ids:
+            raise ValueError("Unexpected practice project IDs")
+        paths = [record["notebook"] for record in records]
+        if len(set(paths)) != 6 or any(not path.startswith(folder + "/session-") or not path.endswith(".ipynb") for path in paths):
+            raise ValueError("Unexpected practice notebook paths")
+        combined.extend(records)
+    return combined
 
 
 def metadata_has_private_state(value: object) -> bool:
@@ -106,12 +109,12 @@ def main() -> int:
     try:
         guided_records = guided_project_records()
     except (OSError, ValueError, KeyError, TypeError):
-        errors.append("Day 2 PROJECT_INDEX.json must describe the six guided student projects.")
+        errors.append("Each practice PROJECT_INDEX.json must describe its six guided student projects.")
         guided_records = []
     actual_notebooks = {name for name in paths if name.endswith(".ipynb")}
     expected_notebooks = set(EXPECTED_NOTEBOOKS) | {record["notebook"] for record in guided_records}
     if actual_notebooks != expected_notebooks:
-        errors.append("The release notebook paths must match the original labs and the Day 2 project index.")
+        errors.append("The release notebook paths must match the original labs and the practice project indexes.")
 
     for relative in sorted(paths):
         path = ROOT / relative
@@ -246,7 +249,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}")
         return 1
-    print(f"Validated 6 original labs (91 code cells) and {len(guided_records)} Day 2 starters ({guided_code_cells} code cells), release hashes and 14 Session 5 assets.")
+    print(f"Validated 6 original labs (91 code cells) and {len(guided_records)} practice starters ({guided_code_cells} code cells), release hashes and 14 Session 5 assets.")
     print("Outputs and private execution metadata are clear; no credential patterns or teacher-only files were found.")
     print("Static checks only: no notebook cells, installations or model requests were executed.")
     return 0
